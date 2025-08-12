@@ -31,13 +31,19 @@ The system uses specialized agents orchestrated by a central controller with GPT
 🔑 Setup Instructions
 
 1️⃣ Clone the repository
+```bash
 git clone <repository-url>
 cd executive-ai-personal-assistant
+```
+
 
 2️⃣ Create a virtual environment
+```bash
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
+```
+
 
 3️⃣ Install dependencies
 ```bash
