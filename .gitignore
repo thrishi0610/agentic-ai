@@ -1,0 +1,9 @@
+.env
+credentials.json
+gmailtoken.json
+calendartoken.json
+prompt.wav
+screenshot.jpg
+main_agent.spec
+/build
+/dist
