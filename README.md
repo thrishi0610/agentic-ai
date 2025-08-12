@@ -1,93 +1,70 @@
 Agentic AI Executive Personal Assistant
+
 📌 Overview
-An AI-powered multi-agent executive assistant designed to automate day-to-day professional tasks like email management, calendar scheduling, intelligent web research, and voice-based interaction.
-Inspired by Jarvis, this system uses specialized AI agents orchestrated by a central controller for dynamic, context-aware decision-making.
+An AI-powered multi-agent personal assistant capable of managing emails, scheduling meetings, performing intelligent web research, and interacting via voice or text.
+The system uses specialized agents orchestrated by a central controller with GPT-4o-mini for reasoning and dynamic tool selection.
 
 🚀 Features
-Multi-Agent Architecture
+* 📧 Email Agent → Read, summarize, and draft emails via Gmail API.
+* 📅 Calendar Agent → Create, update, and retrieve events from Google Calendar.
+* 🌐 Scraper Agent → Autonomous web browsing & data extraction using Playwright + GPT Vision.
+* 🎙️ Voice Input → Real-time speech-to-text with OpenAI Whisper.
+* 🧠 Intelligent Routing → GPT-4o-mini decides which agent to use for a given request.
+* 🔌 Extensible → Easily integrate new tools and APIs.
 
-Email Agent → Reads, summarizes, and drafts emails via Gmail API.
-
-Calendar Agent → Creates, retrieves, and manages Google Calendar events.
-
-Scraper Agent → Autonomous web navigation & data extraction using Playwright + GPT Vision.
-
-Voice Interaction → Real-time transcription with OpenAI Whisper.
-
-Autonomous Reasoning → GPT-4o-mini for dynamic tool selection & context maintenance.
-
-Web Automation → Playwright browser control + BeautifulSoup for parsing content.
-
-Extensible → Easily add new agents for other domains (e.g., finance, note-taking).
-
-🛠️ Tech Stack
-Python, OpenAI GPT-4o-mini, Whisper
-
-Google Calendar API, Gmail API
-
-Playwright, BeautifulSoup
-
-dotenv, pyaudio, keyboard
+🛠 Tech Stack
+* Python
+* OpenAI GPT-4o-mini & Whisper
+* Google Calendar API & Gmail API
+* Playwright, BeautifulSoup
+* dotenv, pyaudio, keyboard
 
 📂 Project Structure
-bash
-Copy
-Edit
-main_agent.py       # Central orchestrator
-calendar_agent.py   # Calendar management agent
+
+main_agent.py       # Central controller
+calendar_agent.py   # Calendar scheduling agent
 email_agent.py      # Email management agent
 scrapper_agent.py   # Web scraping agent
-requirements.txt    # Dependencies
-assets/             # Diagrams & workflow
+requirements.txt    # Project dependencies
+assets/             # Diagrams & visuals
 
-🖼 Workflow
+🔑 Setup Instructions
 
-💡 How It Works
-User speaks or types a request.
+1️⃣ Clone the repository
+git clone <repository-url>
+cd executive-ai-personal-assistant
 
-Main Agent decides whether it can answer directly or delegate to a sub-agent.
+2️⃣ Create a virtual environment
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
 
-Sub-Agent performs the task using APIs/tools.
-
-The result is returned to the Main Agent and delivered to the user.
-
-📜 Example Commands
-“Summarize my unread emails.”
-
-“Schedule a meeting with Sarah next Friday at 4 PM.”
-
-“Find and summarize the latest AI research news.”
-
-🔑 Setup
-Clone Repository
-
-bash
-Copy
-Edit
-git clone https://github.com/<your-username>/Executive-AI-Personal-Agent.git
-Install Dependencies
-
-bash
-Copy
-Edit
+3️⃣ Install dependencies
 pip install -r requirements.txt
-Add API Key
+pip install playwright keyboard
+python -m playwright install
 
+4️⃣ Add environment variables
+Create a .env file in the project root:
+OPENAI_API_KEY=your_openai_api_key
 
-Create .env file in root:
-ini
-Copy
-Edit
-OPENAI_API_KEY=your_openai_key_here
-Set Up Google APIs
+5️⃣ Set up Google APIs
+Enable Gmail API & Google Calendar API in Google Cloud Console.
+Download credentials.json into the project root.
+On first run, authorize access — tokens will be stored locally.
 
-Enable Gmail API & Google Calendar API in Google Cloud.
-
-Download credentials.json into the root directory.
-
-Run the Project
-
-bash
-Copy
-Edit
+6️⃣ Run the assistant
 python main_agent.py
+
+🖥 Usage
+* Press t → Type a command.
+* Hold spacebar → Speak your command.
+* Press q → Quit the program.
+
+💬 Example commands:
+* “Summarize my unread emails.”
+* “Schedule a meeting with Sarah next Tuesday at 2 PM.”
+* “Find the latest AI research articles.”
+
+
+  
