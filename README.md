@@ -1,4 +1,4 @@
-Agentic AI Executive Personal Assistant
+AI-Powered Multi-Agent Personal Assistant
 
 📌 Overview
 An AI-powered multi-agent personal assistant capable of managing emails, scheduling meetings, performing intelligent web research, and interacting via voice or text.
