@@ -21,12 +21,12 @@ The system uses specialized agents orchestrated by a central controller with GPT
 
 📂 Project Structure
 
-main_agent.py       # Central controller
-calendar_agent.py   # Calendar scheduling agent
-email_agent.py      # Email management agent
-scrapper_agent.py   # Web scraping agent
-requirements.txt    # Project dependencies
-assets/             # Diagrams & visuals
+* main_agent.py       # Central controller
+* calendar_agent.py   # Calendar scheduling agent
+* email_agent.py      # Email management agent
+* scrapper_agent.py   # Web scraping agent
+* requirements.txt    # Project dependencies
+* assets/             # Diagrams & visuals
 
 🔑 Setup Instructions
 
@@ -40,21 +40,29 @@ source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 
 3️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
 pip install playwright keyboard
 python -m playwright install
+```
 
 4️⃣ Add environment variables
+```bash
 Create a .env file in the project root:
 OPENAI_API_KEY=your_openai_api_key
+```
 
 5️⃣ Set up Google APIs
+```bash
 Enable Gmail API & Google Calendar API in Google Cloud Console.
 Download credentials.json into the project root.
 On first run, authorize access — tokens will be stored locally.
+```
 
 6️⃣ Run the assistant
+```bash
 python main_agent.py
+```
 
 🖥 Usage
 * Press t → Type a command.
