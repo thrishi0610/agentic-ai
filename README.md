@@ -1,10 +1,10 @@
-AI-Powered Multi-Agent Personal Assistant
+**AI-Powered Multi-Agent Personal Assistant**
 
-📌 Overview
-An AI-powered multi-agent personal assistant capable of managing emails, scheduling meetings, performing intelligent web research, and interacting via voice or text.
-The system uses specialized agents orchestrated by a central controller with GPT-4o-mini for reasoning and dynamic tool selection.
+**📌 Overview**
+* An AI-powered multi-agent personal assistant capable of managing emails, scheduling meetings, performing intelligent web research, and interacting via voice or text.
+* The system uses specialized agents orchestrated by a central controller with GPT-4o-mini for reasoning and dynamic tool selection.
 
-🚀 Features
+**🚀 Features**
 * 📧 Email Agent → Read, summarize, and draft emails via Gmail API.
 * 📅 Calendar Agent → Create, update, and retrieve events from Google Calendar.
 * 🌐 Scraper Agent → Autonomous web browsing & data extraction using Playwright + GPT Vision.
@@ -12,14 +12,14 @@ The system uses specialized agents orchestrated by a central controller with GPT
 * 🧠 Intelligent Routing → GPT-4o-mini decides which agent to use for a given request.
 * 🔌 Extensible → Easily integrate new tools and APIs.
 
-🛠 Tech Stack
+**🛠 Tech Stack**
 * Python
 * OpenAI GPT-4o-mini & Whisper
 * Google Calendar API & Gmail API
 * Playwright, BeautifulSoup
 * dotenv, pyaudio, keyboard
 
-📂 Project Structure
+**📂 Project Structure**
 
 * main_agent.py       # Central controller
 * calendar_agent.py   # Calendar scheduling agent
@@ -28,7 +28,7 @@ The system uses specialized agents orchestrated by a central controller with GPT
 * requirements.txt    # Project dependencies
 * assets/             # Diagrams & visuals
 
-🔑 Setup Instructions
+**🔑 Setup Instructions**
 
 1️⃣ Clone the repository
 ```bash
@@ -70,12 +70,12 @@ On first run, authorize access — tokens will be stored locally.
 python main_agent.py
 ```
 
-🖥 Usage
+**🖥 Usage**
 * Press t → Type a command.
 * Hold spacebar → Speak your command.
 * Press q → Quit the program.
 
-💬 Example commands:
+**💬 Example commands:**
 * “Summarize my unread emails.”
 * “Schedule a meeting with Sarah next Tuesday at 2 PM.”
 * “Find the latest AI research articles.”
